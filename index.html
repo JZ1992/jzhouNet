@@ -1,12 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>personalNet</title>
+
+    <link rel="stylesheet" href="/css/main.css">
 </head>
+
 <body>
-    测试内容水水
+    <!-- 圣杯布局 -->
+    <style>
+        .diTitle {
+            text-align: center;
+        }
+
+        .m50 {
+            width: 100%;
+            height: 50px;
+            clear: both;
+        }
+
+        .container {
+            padding: 0 300px 0 200px;
+        }
+
+        .main,
+        .left,
+        .right {
+            position: relative;
+            min-height: 130px;
+            float: left;
+        }
+
+        .left {
+            left: -200px;
+            margin-left: -100%;
+            background: gray;
+            width: 200px;
+        }
+
+        .right {
+            right: -300px;
+            margin-left: -300px;
+            background: #95495c;
+            width: 300px;
+        }
+
+        .main {
+            background: #a45d55;
+            width: 100%;
+        }
+    </style>
+    <div class='diTitle'>
+        圣杯布局:Dom顺序结构【主体→左右】
+    </div>
+    <div class="container">
+        <div class="main"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <div class="m50"></div>
+
+
+    <!-- 双飞翼布局 -->
+    <style>
+        .sfleft,
+        .sfmain,
+        .sfright {
+            float: left;
+            min-height: 130px;
+            text-align: center;
+        }
+
+        .sfleft {
+            background: #1d951d;
+            width: 200px;
+            margin-left: -100%;
+        }
+
+        .sfmain {
+            background: #343485;
+            width: 100%;
+        }
+
+        .sfright {
+            background: #b61a1a;
+            width: 300px;
+            margin-left: -300px;
+        }
+
+        .sfcontent {
+            margin: 0 300px 0 200px;
+        }
+    </style>
+    <div class='diTitle'>
+        双飞翼布局:Dom顺序结构【主体→左右】
+    </div>
+    <div class="sfcontainer">
+        <div class="sfmain">
+            <div class="sfcontent">
+                main
+            </div>
+        </div>
+        <div class="sfleft"></div>
+        <div class="sfright"></div>
+    </div>
+
+    <div class="m50"></div>
+    <style>
+        .flcontainer{
+            display: flex;
+            min-height: 130px;
+        }
+        .flmain{
+            flex-grow:1;
+            background:#6b6bd3;
+        }
+        .flleft{
+            order:-1;
+            flex-basis:200px;
+            background:#4a874a;
+        }
+        .flright{
+            flex-basis:300px;
+            background:#f24c4c;
+        }
+    </style>
+    <div class='diTitle'>
+        flex布局
+    </div>
+    <div class="flcontainer">
+        <div class="flmain"></div>
+        <div class="flleft"></div>
+        <div class="flright"></div>
+    </div>
+    
 </body>
+
 </html>
